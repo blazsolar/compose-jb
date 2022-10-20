@@ -80,7 +80,7 @@ Run native macos sample:
 
 ```console
 ./compose/frameworks/support/jbdeps/android-sdk/downloadAndroidSdk
-export COMPOSE_CUSTOM_VERSION=1.1.0-beta04
+export COMPOSE_CUSTOM_VERSION=1.2.0-local02
 ./scripts/publishToMavenLocal -Pcompose.platforms=all
 ./scripts/publishGradlePluginToMavenLocal
 ./scripts/publishWebComponentsToMavenLocal
