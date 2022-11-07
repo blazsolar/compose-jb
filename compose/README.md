@@ -78,13 +78,11 @@ Run native macos sample:
 ```
 
 ## Multiplatform build to mavenLocal
-
-<<<<<<< HEAD
 ```bash
-export COMPOSE_CUSTOM_VERSION=1.2.0-local02 &&\
-./scripts/publishToMavenLocal -Pcompose.platforms=all &&\
-./scripts/publishGradlePluginToMavenLocal &&\
-./scripts/publishWebComponentsToMavenLocal
+	export COMPOSE_CUSTOM_VERSION=1.2.0-local02 &&\
+	./scripts/publishToMavenLocal -Pcompose.platforms=all &&\
+	./scripts/publishGradlePluginToMavenLocal &&\
+	./scripts/publishWebComponentsToMavenLocal
 ```
 `-Pcompose.platforms=all` could be replace with comma-separated list of platforms, such as `js,jvm,androidDebug,androidRelease,macosx64,uikit`.
 
