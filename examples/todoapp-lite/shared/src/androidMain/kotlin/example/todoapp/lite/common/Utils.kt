@@ -9,11 +9,11 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyListState
-import androidx.compose.material.Button
-import androidx.compose.material.Card
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.ProvideTextStyle
-import androidx.compose.material.Text
+import androidx.compose.material3.Button
+import androidx.compose.material3.Card
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.ProvideTextStyle
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -45,13 +45,13 @@ internal actual fun Dialog(
     androidx.compose.ui.window.Dialog(
         onDismissRequest = onCloseRequest,
     ) {
-        Card(elevation = 8.dp) {
+        Card() {
             Column(
                 modifier = Modifier
                     .padding(8.dp)
                     .height(IntrinsicSize.Min)
             ) {
-                ProvideTextStyle(MaterialTheme.typography.subtitle1) {
+                ProvideTextStyle(MaterialTheme.typography.headlineSmall) {
                     Text(text = title)
                 }
 

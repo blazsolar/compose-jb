@@ -13,7 +13,11 @@ struct ComposeView: UIViewControllerRepresentable {
 struct ContentView: View {
     var body: some View {
         ComposeView()
-                .ignoresSafeArea(.keyboard) // Compose has own keyboard handler
+            // Ignore only top and bottom edges. This mimics Android behaviour for when
+            //  screen is oriented horizontaly. WindowInsets.systemBars contains information
+            //  for .leadgin and .trailing edges, but compose by iteself doesn't apply those
+            //  insets by default, similrat to what it does with top inset on AppBar.
+            .ignoresSafeArea(.all, edges: [.top, .bottom])
     }
 }
 

@@ -4,11 +4,20 @@
  */
 
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.imePadding
+import androidx.compose.foundation.layout.navigationBarsPadding
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.window.ComposeUIViewController
 import example.todoapp.lite.common.RootContent
 import platform.UIKit.UIViewController
 
-fun MainViewController() : UIViewController = ComposeUIViewController {
-    RootContent(modifier = Modifier.fillMaxSize())
+fun MainViewController(): UIViewController = ComposeUIViewController {
+    MaterialTheme {
+        RootContent(
+            modifier = Modifier.fillMaxSize()
+                .navigationBarsPadding()
+                .imePadding()
+        )
+    }
 }

@@ -10,7 +10,8 @@ kotlin {
         val androidMain by getting {
             dependencies {
                 implementation(project(":shared"))
-                implementation(compose.material)
+                implementation(compose.material3)
+                implementation("com.google.android.material:material:1.8.0")
             }
         }
     }
@@ -18,6 +19,7 @@ kotlin {
 
 android {
     compileSdk = 33
+    namespace = "example.todoapp.lite"
     defaultConfig {
         applicationId = "org.jetbrains.TodoAppLite"
         minSdk = 26
@@ -26,7 +28,7 @@ android {
         versionName = "1.0"
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 }

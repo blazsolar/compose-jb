@@ -1,11 +1,10 @@
 package example.todoapp.lite.common
 
-
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyListState
-import androidx.compose.material.*
+import androidx.compose.material3.*
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -54,7 +53,7 @@ internal actual fun Dialog(
             Column(
                 modifier = Modifier.padding(8.dp)
             ) {
-                ProvideTextStyle(MaterialTheme.typography.subtitle1) {
+                ProvideTextStyle(MaterialTheme.typography.titleSmall) {
                     Text(text = title)
                 }
 
